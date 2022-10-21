@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SearchingJobTesting {
+public class SearchingJobOnJustJoinIT {
 
     WebDriver driver;
 
@@ -26,7 +26,7 @@ public class SearchingJobTesting {
     @When("user inputs just join it into the search box")
     public void inputText() {
         GooglePage onGooglePage = new GooglePage(driver);
-        onGooglePage.inputText();
+        onGooglePage.inputTextJustJoinIT();
 
     }
 
