@@ -75,5 +75,3 @@ public class SearchingJobOnJustJoinIT {
         driver.quit();
     }
 }
-// \Users\m.foksinska\Pictures
-// c:\\tmp\\screenshot.png

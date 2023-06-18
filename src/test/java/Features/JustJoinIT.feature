@@ -1,4 +1,4 @@
-Feature: Tester job searching on justjoinit.pl
+Feature: Tester job searching on justjoinit.pl page
 
   Scenario: Searching for junior tester job in Trójmiasto
 
