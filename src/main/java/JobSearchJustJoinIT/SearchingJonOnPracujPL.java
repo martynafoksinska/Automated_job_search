@@ -24,7 +24,7 @@ public class SearchingJonOnPracujPL {
     }
 
     @When("the user inputs pracuj pl into the search box")
-    public void inputText() {
+    public void inputText() throws InterruptedException {
         GooglePage onGooglePage = new GooglePage(driver);
         onGooglePage.inputTextPracujPL();
 
@@ -47,7 +47,7 @@ public class SearchingJonOnPracujPL {
     @Then("the user inputs job name and location into the search box and then clicks search")
     public void clickOnJobSearch() {
         PracujPLPage onPracujPLPage = new PracujPLPage(driver);
-        onPracujPLPage.clickOnJobSearch();
+        onPracujPLPage.clickOnItJobOffers();
 
     }
 }

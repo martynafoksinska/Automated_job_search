@@ -13,18 +13,15 @@ public class PracujPLPage {
     }
 
     public void acceptCookies() {
-        WebElement acceptPopUp = driver.findElement(By.className("ptv5q7l"));
+        WebElement acceptPopUp = driver.findElement(By.xpath("/html/body/div[1]/div/div[7]/div/div/div/div[3]/div/button[1]"));
         acceptPopUp.click();
-
-        WebElement acceptCookiesButton = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[6]/div/div/div/div[4]/div/button[1]"));
-        acceptCookiesButton.click();
 
     }
 
-    public void clickOnJobSearch() {
-        WebElement clickOnSearchJobButton = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[1]/div[3]/div/div/div[1]/div[1]/div/div/div/input"));
-        clickOnSearchJobButton.click();
-        clickOnSearchJobButton.sendKeys("Tester");
+    public void clickOnItJobOffers() {
+        WebElement clickOnItJobOffers = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/header/div[1]/div/nav/a[3]/span"));
+        clickOnItJobOffers.click();
+
 
         WebElement clickOnLocationButton = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[1]/div[3]/div/div/div[1]/div[3]/div/div/div/input"));
         clickOnLocationButton.click();
