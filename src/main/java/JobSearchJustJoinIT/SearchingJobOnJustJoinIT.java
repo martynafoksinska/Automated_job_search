@@ -6,8 +6,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v85.media.model.Timestamp;
+
+import java.io.File;
+import java.io.IOException;
 
 public class SearchingJobOnJustJoinIT {
 
@@ -52,10 +59,21 @@ public class SearchingJobOnJustJoinIT {
 
     }
 
-    @Then("user clicks location and chooses Trójmiasto")
+    @And("user clicks location and chooses Trójmiasto")
     public void clickLocation() {
         JustJoinITPage onJustJoinITPage = new JustJoinITPage(driver);
         onJustJoinITPage.clickLocation();
 
     }
+
+    @Then("screenshot with available job offers is taken")
+    public void screenshot() throws IOException {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String imageFileDir = "C:\\Users\\marty\\Desktop";
+        FileUtils.copyFile(scrFile, new File(imageFileDir, "test" + timestamp + ".png"));
+        driver.quit();
+    }
 }
+// \Users\m.foksinska\Pictures
+// c:\\tmp\\screenshot.png
