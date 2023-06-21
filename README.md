@@ -5,3 +5,5 @@ I created this script to automate the process of searching for manual tester job
 * Language: Java
 * Browser: Chrome, Firefox
 * Driver: Chrome driver, Selenium
+* Framerwork: Cucumber
+* Scenarios are written in the Gherkin language
