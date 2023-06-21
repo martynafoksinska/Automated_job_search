@@ -1,4 +1,4 @@
-# jobSearch
+# Automated job search
 
 I created this script to automate the process of searching for manual tester job on pracuj.pl and justjoint.it pages.
 
