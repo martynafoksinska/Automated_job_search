@@ -7,10 +7,10 @@ Pracuj.pl - in progress
 * Language: Java
 * Browser: Chrome, Firefox
 * Driver: Chrome driver, Selenium
-* Framerwork: Cucumber
+* Framework: Cucumber
 * Scenarios are written in the Gherkin language
 
-#### Test Scenario - Search functionality for justjoinit.pl page
+#### Test Scenario - Search functionality on justjoinit.pl page
 
   Scenario: Searching for junior tester job in Trójmiasto
 
