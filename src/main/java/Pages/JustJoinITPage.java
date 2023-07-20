@@ -15,7 +15,7 @@ public class JustJoinITPage {
     }
 
     public void clickTestingButton() {
-        WebElement testingIcon = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[2]/div[1]/div/div[12]/div/div"));
+        WebElement testingIcon = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/div[1]/div/div[12]/div/div/a/div"));
         testingIcon.click();
          }
 

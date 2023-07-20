@@ -72,6 +72,6 @@ public class SearchingJobOnJustJoinIT {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String imageFileDir = "C:\\Users\\marty\\Desktop";
         FileUtils.copyFile(scrFile, new File(imageFileDir, "test" + timestamp + ".png"));
-        driver.quit();
+        //driver.quit();
     }
 }

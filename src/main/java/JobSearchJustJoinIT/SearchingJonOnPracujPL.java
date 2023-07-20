@@ -7,8 +7,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v85.media.model.Timestamp;
+
+import java.io.File;
+import java.io.IOException;
 
 public class SearchingJonOnPracujPL {
 
@@ -44,10 +51,19 @@ public class SearchingJonOnPracujPL {
 
     }
 
-    @Then("the user inputs job name and location into the search box and then clicks search")
+    @And("the user clicks on Oferty IT and chooses desired filters")
     public void clickOnJobSearch() {
         PracujPLPage onPracujPLPage = new PracujPLPage(driver);
         onPracujPLPage.clickOnItJobOffers();
 
+    }
+
+    @Then("screenshot with available job offers from pracuj.pl is taken")
+    public void screenshot() throws IOException {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String imageFileDir = "C:\\Users\\marty\\Desktop";
+        FileUtils.copyFile(scrFile, new File(imageFileDir, "test" + timestamp + ".png"));
+        //driver.quit();
     }
 }
