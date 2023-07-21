@@ -37,7 +37,7 @@ public class GooglePage {
     }
 
     public void clickLink() {
-        WebElement firstLink = driver.findElement(By.xpath("/html/body/div[6]/div/div[13]/div[1]/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/a/h3"));
+        WebElement firstLink = driver.findElement(By.xpath("/html/body/div[6]/div/div[13]/div[1]/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/div/div[1]/div/a/h3"));
         firstLink.click();
         WebElement offersButton = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[2]/div[3]/a[1]/span"));
         offersButton.click();
